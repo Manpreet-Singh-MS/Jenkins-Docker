@@ -1,5 +1,5 @@
-_Installation_
-==============
+Installation
+============
 
 Build the Jenkins BlueOcean Docker Image
 
@@ -13,16 +13,16 @@ so before proceeding make sure you run the following commands :-
 3. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  (This might work as it is deprecated)
 4. sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu kinetic stable"
 
-_Create the network 'jenkins'_
-===============================
+Create the network 'jenkins'
+============================
 
 docker network create jenkins -> docker network ls (Run this command to check the Network list).
 
-_Run the Container_
-======================
+Run the Container
+===================
 
-MacOS / Linux
-=============
+_MacOS / Linux_
+==============
 
 docker run --name jenkins-blueocean --restart=on-failure --detach \
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
@@ -33,8 +33,8 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   myjenkins-blueocean:2.332.3-1
 
 
-Windows
-=======
+_Windows_
+=========
 
 docker run --name jenkins-blueocean --restart=on-failure --detach `
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 `
@@ -46,14 +46,14 @@ docker run --name jenkins-blueocean --restart=on-failure --detach `
 P.S. If you are using a Linux WSL Terminal to Run the commands on Windows make sure you Replace ( ' ) with ( \ ) at the end of each row.
 
 
-_Get the Password_
-==================
+Get the Password
+================
 
 docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
 
 
-_Connect to the Jenkins_
-========================
+Connect to the Jenkins :atom:
+==============================
 
 https://localhost:8080/
 
