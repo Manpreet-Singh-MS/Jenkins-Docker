@@ -1,4 +1,4 @@
-Installation :octocat:
+Installation
 ============
 
 Build the Jenkins BlueOcean Docker Image
@@ -22,7 +22,7 @@ docker network create jenkins -> docker network ls (Run this command to check th
 Run the Container
 ===================
 
-**MacOS / Linux**
+###**MacOS / Linux**
 
 
 docker run --name jenkins-blueocean --restart=on-failure --detach \
@@ -34,7 +34,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
     myjenkins-blueocean:2.332.3-1
 
 
-**Windows**
+###**Windows**
 
 
 docker run --name jenkins-blueocean --restart=on-failure --detach \
