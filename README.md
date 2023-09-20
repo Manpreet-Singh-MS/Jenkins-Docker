@@ -21,8 +21,7 @@ docker network create jenkins -> docker network ls (Run this command to check th
 Run the Container
 ===================
 
-_MacOS / Linux_
-==============
+MacOS / Linux
 
 docker run --name jenkins-blueocean --restart=on-failure --detach \
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
@@ -33,8 +32,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   myjenkins-blueocean:2.332.3-1
 
 
-_Windows_
-=========
+Windows
 
 docker run --name jenkins-blueocean --restart=on-failure --detach `
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 `
