@@ -1,4 +1,5 @@
 _Installation_
+==============
 
 Build the Jenkins BlueOcean Docker Image
 
@@ -13,10 +14,12 @@ so before proceeding make sure you run the following commands :-
 4. sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu kinetic stable"
 
 _Create the network 'jenkins'_
+===============================
 
 docker network create jenkins -> docker network ls (Run this command to check the Network list).
 
 _Run the Container_
+======================
 
 MacOS / Linux
 =============
