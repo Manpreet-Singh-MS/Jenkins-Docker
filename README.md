@@ -1,7 +1,7 @@
 Installation
 ============
 
-Build the Jenkins BlueOcean Docker Image
+## Build the Jenkins BlueOcean Docker Image
 
 docker build -t myjenkins-blueocean:2.332.3-1 .
 
