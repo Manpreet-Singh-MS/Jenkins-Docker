@@ -6,8 +6,7 @@ Installation
 1. <code>docker pull jenkins/jenkins</code>
 2. <code>docker build -t myjenkins-blueocean:2.414.2-1 .</code>
 
-You might face some error during  the build like (unable to locate package docker-ce-cli)
-so before proceeding make sure you run the following commands :-
+**__You might face some error during  the build like (unable to locate package docker-ce-cli) so before proceeding make sure you run the following commands :-__**
 
 1. <code>sudo apt-get update</code>
 2. <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code>
@@ -26,7 +25,7 @@ Run the Container
 ### MacOS / Linux
 
 
-docker run \
+<code>docker run \
   --name jenkins-docker \
   --rm \
   --detach \
@@ -38,12 +37,12 @@ docker run \
   --volume jenkins-data:/var/jenkins_home \
   --publish 2376:2376 \
   docker:dind \
-  --storage-driver overlay2
+  --storage-driver overlay2</code>
 
 
 ### Windows
 
-docker run \
+<code>docker run \
   --name jenkins-blueocean \
   --restart=on-failure \ 
   --detach \
@@ -55,7 +54,7 @@ docker run \
   --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.414.2-1 
+  myjenkins-blueocean:2.414.2-1 </code>
 
 
 Get the Password
@@ -66,7 +65,7 @@ Get the Password
 Connect to the Jenkins
 ======================
 
-https://localhost:8080/
+<code>https://localhost:8080/</code>
 
 Connect to Jenkins shell
 ========================
@@ -80,12 +79,12 @@ Python Installation in Jenkins Container
 
 **__Python Package does not comes with base image of Jenkins so we required to access the Jenkin shell with Root Access to download the Python Package.__**
 
-### Following command is to be executed to gain the root access :- ###
+#### Following command is to be executed to gain the root access :- ####
    
 
-<code>docker exec -it -u 0 {CONTAINER ID} /bin/bash to open an interactive terminal within the Docker Container as root (user 0).</code>
+<code>docker exec -it -u 0 {CONTAINER ID} /bin/bash</code> to open an interactive terminal within the Docker Container as root (user 0).
 
-<code>apt-get update and apt-get install python3 and apt-get install python3-pip to install Python3 and pip within the Docker container.</code>
+<code>apt-get update</code> and <code>apt-get install python3</code> and <code>apt-get install python3-pip</code> to install Python3 and pip within the Docker container.
 
 
 
