@@ -17,7 +17,7 @@ so before proceeding make sure you run the following commands :-
 Create the network 'jenkins'
 ============================
 
-docker network create jenkins -> docker network ls (Run this command to check the Network list).
+Run command: docker network create jenkins
 
 
 Run the Container
@@ -61,7 +61,7 @@ docker run \
 Get the Password
 ================
 
-docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
+Run command: docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
 
 Connect to the Jenkins
 ======================
@@ -71,20 +71,21 @@ https://localhost:8080/
 Connect to Jenkins shell
 ========================
 
-docker exec -it jenkins-blueocean bash -> Non-Root Access
+Run command: docker exec -it jenkins-blueocean bash -> Non-Root Access
 
-docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
+Run command: docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
 
 Python Installation in Jenkins Container
 ========================================
 
 Python Package does not comes with base image of Jenkins so we required to access the Jenkin shell with Root Access to download the Python Package.
 
-### Following command is to be executed to gain the root access :- ###
+#### Following command is to be executed to gain the root access :- ####
    
-docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
 
+Run command: docker exec -it -u 0 {CONTAINER ID} /bin/bash to open an interactive terminal within the Docker Container as root (user 0).
 
+Run command: apt-get update and apt-get install python3 and apt-get install python3-pip to install Python3 and pip within the Docker container.
 
 
 
