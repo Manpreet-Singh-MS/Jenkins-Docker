@@ -68,6 +68,15 @@ Connect to the Jenkins
 
 https://localhost:8080/
 
+Connect to Jenkins shell
+========================
+
+docker exec -it jenkins-blueocean bash -> Non-Root Access
+
+docker exec -it -u 0 <current running container id> -> Root Access
+
+
+
 
 
 
