@@ -73,7 +73,7 @@ Connect to Jenkins shell
 
 docker exec -it jenkins-blueocean bash -> Non-Root Access
 
-docker exec -it -u 0 (<current running container id>) -> Root Access
+docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
 
 
 
