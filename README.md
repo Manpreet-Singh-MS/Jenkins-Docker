@@ -9,15 +9,15 @@ Installation
 You might face some error during  the build like (unable to locate package docker-ce-cli)
 so before proceeding make sure you run the following commands :-
 
-1. sudo apt-get update
-2. sudo apt install apt-transport-https ca-certificates curl software-properties-common
-3. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  (This might work as it is deprecated)
-4. sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu kinetic stable"
+1. <code>sudo apt-get update</code>
+2. <code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code>
+3. <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add </code>-  (This might work as it is deprecated)
+4. <code>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu kinetic stable"</code>
 
 Create the network 'jenkins'
 ============================
 
-Run command: docker network create jenkins
+<code>docker network create jenkins</code>
 
 
 Run the Container
@@ -61,7 +61,7 @@ docker run \
 Get the Password
 ================
 
-Run command: docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
+<code>docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword</code>
 
 Connect to the Jenkins
 ======================
@@ -71,21 +71,21 @@ https://localhost:8080/
 Connect to Jenkins shell
 ========================
 
-Run command: docker exec -it jenkins-blueocean bash -> Non-Root Access
+<code>docker exec -it jenkins-blueocean bash</code> -> Non-Root Access
 
-Run command: docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
+<code>docker exec -it -u 0 {CONTAINER ID} /bin/bash</code> -> Root Access
 
 Python Installation in Jenkins Container
 ========================================
 
-Python Package does not comes with base image of Jenkins so we required to access the Jenkin shell with Root Access to download the Python Package.
+**__Python Package does not comes with base image of Jenkins so we required to access the Jenkin shell with Root Access to download the Python Package.__**
 
-#### Following command is to be executed to gain the root access :- ####
+### Following command is to be executed to gain the root access :- ###
    
 
-Run command: docker exec -it -u 0 {CONTAINER ID} /bin/bash to open an interactive terminal within the Docker Container as root (user 0).
+<code>docker exec -it -u 0 {CONTAINER ID} /bin/bash to open an interactive terminal within the Docker Container as root (user 0).</code>
 
-Run command: apt-get update and apt-get install python3 and apt-get install python3-pip to install Python3 and pip within the Docker container.
+<code>apt-get update and apt-get install python3 and apt-get install python3-pip to install Python3 and pip within the Docker container.</code>
 
 
 
