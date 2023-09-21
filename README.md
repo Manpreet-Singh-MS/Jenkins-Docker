@@ -3,8 +3,8 @@ Installation
 
 ## Build the Jenkins BlueOcean Docker Image
 
-1. ==docker pull jenkins/jenkins==
-2. ==docker build -t myjenkins-blueocean:2.414.2-1 .==
+1. <code>docker pull jenkins/jenkins</code>
+2. <code>docker build -t myjenkins-blueocean:2.414.2-1 .</code>
 
 You might face some error during  the build like (unable to locate package docker-ce-cli)
 so before proceeding make sure you run the following commands :-
