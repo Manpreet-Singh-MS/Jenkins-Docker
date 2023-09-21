@@ -75,8 +75,14 @@ docker exec -it jenkins-blueocean bash -> Non-Root Access
 
 docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
 
+Python Installation in Jenkins Container
+========================================
 
+Python Package does not comes with base image of Jenkins so we required to access the Jenkin shell with Root Access to download the Python Package.
 
+### Following command is to be executed to gain the root access :- ###
+   
+docker exec -it -u 0 {CONTAINER ID} /bin/bash -> Root Access
 
 
 
