@@ -3,16 +3,16 @@ Installation
 
 ## Build the Jenkins BlueOcean Docker Image
 
-1. @docker pull jenkins/jenkins
-2. @docker build -t myjenkins-blueocean:2.414.2-1 .
+1. [docker pull jenkins/jenkins]
+2. [docker build -t myjenkins-blueocean:2.414.2-1 .]
 
 You might face some error during  the build like (unable to locate package docker-ce-cli)
 so before proceeding make sure you run the following commands :-
 
-1. @sudo apt-get update
-2. @sudo apt install apt-transport-https ca-certificates curl software-properties-common
-3. @curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  (This might work as it is deprecated)
-4. @sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu kinetic stable"
+1. [sudo apt-get update]
+2. [sudo apt install apt-transport-https ca-certificates curl software-properties-common]
+3. [@curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add] -  (This might work as it is deprecated)
+4. [@sudo add-apt-repository "deb [arch=amd64] [https://download.docker.com/linux/ubuntu kinetic stable"]
 
 Create the network 'jenkins'
 ============================
