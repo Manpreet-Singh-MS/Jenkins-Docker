@@ -25,26 +25,26 @@ Run the Container
 ### MacOS / Linux
 
 
-<code>docker run \
-  --name jenkins-docker \
-  --rm \
-  --detach \
-  --privileged \
-  --network jenkins \
-  --network-alias docker \
-  --env DOCKER_TLS_CERTDIR=/certs \
-  --volume jenkins-docker-certs:/certs/client \
-  --volume jenkins-data:/var/jenkins_home \
-  --publish 2376:2376 \
-  docker:dind \
-  --storage-driver overlay2</code>
+<code>docker run
+--name jenkins-docker
+--rm
+--detach
+--privileged
+--network jenkins
+--network-alias docker
+--env DOCKER_TLS_CERTDIR=/certs
+--volume jenkins-docker-certs:/certs/client
+--volume jenkins-data:/var/jenkins_home
+--publish 2376:2376
+docker:dind
+--storage-driver overlay2</code>
 
 
 ### Windows
 
 <code>docker run \
   --name jenkins-blueocean \
-  --restart=on-failure \ 
+  --restart=on-failure \
   --detach \
   --network jenkins \
   --env DOCKER_HOST=tcp://docker:2376 \
