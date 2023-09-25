@@ -54,7 +54,7 @@ docker:dind
   --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.414.2-1 </code>
+  myjenkins-blueocean:2.414.2-1</code>
 
 
 Get the Password
