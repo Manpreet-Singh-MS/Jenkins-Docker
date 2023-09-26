@@ -96,6 +96,9 @@ Pull and run the image alpine/socat
 
 **The above container will be used as a external Docker container for jenkins** 
 
+Jenkins-agent-python
+====================
 
+<code>docker pull masprtech1/jenkins-agent-python</code>
 
-
+Build Image :- [Docker File link](https://github.com/Manpreet-Singh-MS/Docker/blob/main/python_image_JDK11_Alpine/Dockerfile)
