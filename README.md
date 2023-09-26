@@ -86,12 +86,15 @@ Python Installation in Jenkins Container
 
 <code>apt-get update</code> and <code>apt-get install python3</code> and <code>apt-get install python3-pip</code> to install Python3 and pip within the Docker container.
 
-alpine/socat
-============
+Pull and run the image alpine/socat
+===================================
 
 <code>docker run -d --restart=always -p 127.0.0.1:2376:2375 --network jenkins -v /var/run/docker.sock:/var/run/docker.sock alpine/socat tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
 </code>
 
+<code> docker inspect <contrainer_id> </code>
+
+**The above container will be used as a external Docker container for jenkins** 
 
 
 
